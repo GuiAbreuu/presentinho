@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentinho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oi, antes de tudo gostaria de dizer que eu te amo muito ♥</h1>
+        <p>Espero que goste, não é nada muito UOOOU, mas foi de coração.</p>
+        <p>Você é muito especial pra mim, obrigado por existir ♥</p>
+        <p>E bora pro joguinho! É só digitar um número e ter sua resposta.</p>
+
+        <div id="game">
+            <label for="number">Escolha um número:</label>
+            <input type="number" id="number" min="1" max="47" />
+            <button onclick="showResponse()">Ver resposta</button>
+        </div>
+
+        <p id="response" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+
+    <script>
+        const RESPOSTAS = {
+            '1': 'Eu amo sua voz',
+            '2': 'Eu amo seu sorriso',
+            '3': 'Eu amo seu olhar',
+            '4': 'Eu amo seu carinho',
+            '5': 'Eu amo seus abraços',
+            '6': 'Eu amo seus beijos',
+            '7': 'Eu amo como você me faz querer ser melhor',
+            '8': 'Eu amo como você me desperta sentimentos que jamais imaginei sentir',
+            '9': 'Eu amo seu estilo',
+            '10': 'Eu amo sua vontade de crescer',
+            '11': 'Eu amo o jeito que você me olha',
+            '12': 'Eu amo sua risada',
+            '13': 'Eu amo como você se importa comigo',
+            '14': 'Eu amo a sua inteligência, e como você resolve as coisas',
+            '15': 'Eu amo nossas conversas profundas',
+            '16': 'Eu amo você nos mínimos detalhes',
+            '17': 'Eu amo como você torna tudo mais especial',
+            '18': 'Eu amo sua determinação',
+            '19': 'Eu amo como você me faz sentir mais amado todos os dias',
+            '20': 'Eu amo que estando ao seu lado eu esqueço de todos os problemas',
+            '21': 'Eu amo como você me apoia em tudo que faço',
+            '22': 'Eu amo o jeito que você se preocupa comigo',
+            '23': 'Eu amo como você é linda por dentro e por fora',
+            '24': 'Eu amo me dar forças',
+            '25': 'Eu amo sua voz de sono',
+            '26': 'Eu amo sua voz animada',
+            '27': 'Eu amo nossos momentos juntos',
+            '28': 'Eu amo como você transforma momentos simples em inesquecíveis',
+            '29': 'Eu amo a sua criatividade e como ela me surpreende',
+            '30': 'Eu amo seu senso de humor',
+            '31': 'Eu amo como você faz eu me sentir',
+            '32': 'Eu amo o jeito que você conversa comigo',
+            '33': 'Eu amo como você me abraça pra dormir',
+            '34': 'Eu amo seu cheiro',
+            '35': 'Eu amo como você é minha paz',
+            '36': 'Eu amo como você é meu alicerce',
+            '37': 'Eu amo como nos entendemos',
+            '38': 'Eu amo que podemos ser nós mesmos um com o outro',
+            '39': 'Eu amo como você trata as pessoas',
+            '40': 'Eu amo como você torna tudo mais divertido',
+            '41': 'Eu amo como a vida ao seu lado parece mais leve e cheia de cor',
+            '42': 'Eu amo que, dentre TODOS no mundo, eu tive a sorte de encontrar você',
+            '43': 'Eu amo como você me faz sentir protegido, como o Tomoe protege a Nanami',
+            '44': 'Eu amo como nosso amor parece destinado, como o da Nanami e do Tomoe',
+            '45': 'Eu amo como você me dá forças para nunca desistir, assim como o Naruto nunca desiste de seus sonhos',
+            '46': 'Eu amo como você é carinhosa e dedicada, como a Hinata com o Naruto',
+            '47': 'Eu amo como, ao seu lado, eu sinto que posso enfrentar qualquer obstáculo, como o Naruto enfrentando o Pain'
+        };
+
+        function showResponse() {
+            const number = document.getElementById('number').value;
+            const response = RESPOSTAS[number] || 'Opa, deu erro! Escolha um número válido entre 1 e 47.';
+            document.getElementById('response').textContent = response;
+        }
+    </script>
+</body>
+</html>
